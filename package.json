@@ -1,0 +1,13 @@
+{
+    "name": "legacy-api",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {},
+    "dependencies": {
+        "@netlify/blobs": "^8.0.1",
+        "@netlify/functions": "^2.8.1"
+    },
+    "devDependencies": {
+        "@types/node": "^22.5.4"
+    }
+}
