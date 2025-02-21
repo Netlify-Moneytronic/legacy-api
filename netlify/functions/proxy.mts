@@ -1,6 +1,6 @@
 export default async () => {
     //Fetch data from https://legacy-api.netlify.app/.netlify/functions/getData
-    const url = "https://q1consumerapi.qa.moneygram.com/services/capi/api/v1/sendMoney/feeLookup?senderCountry=USA&senderCurrency=USD&receiveCountry=MEX&sendAmount=100";
+    const url = "https://q1consumerapi.qa.moneygram.com/services/capi/api/v1/sendMoney/feeLookup";
     const response = await fetch(url, {
         method: 'GET',
         headers: {
