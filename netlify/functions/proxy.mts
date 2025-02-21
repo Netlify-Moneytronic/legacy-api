@@ -1,7 +1,14 @@
-export default async (req: Request) => {
+export default async () => {
     //Fetch data from https://legacy-api.netlify.app/.netlify/functions/getData
-    const url = "https://consumerapi.moneygram.com/services/capi/api/v1/sendMoney/feeLookup?senderCountry=USA&senderCurrency=USD&receiveCountry=GHA&sendAmount=100";
-    const response = await fetch(url);
+    const url = "https://q1consumerapi.qa.moneygram.com/services/capi/api/v1/sendMoney/feeLookup?senderCountry=USA&senderCurrency=USD&receiveCountry=MEX&sendAmount=100";
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'accept': 'application/json',
+            'locale-header': 'en_US',
+            'clientkey': process.env.CLIENT_KEY || ''
+        }
+    });
     console.log(response);
     const data = await response.json();
     console.log(JSON.stringify(data));
